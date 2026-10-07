@@ -1,244 +1,3 @@
-
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tushar Codes - Portfolio</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Anton for massive headings, Inter for body -->
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'anton': ['Anton', 'sans-serif'],
-                        'inter': ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        'spider-red': '#E23636',
-                        'spider-blue': '#0033CC',
-                        'off-white': '#F5F5F5'
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body {
-            background-color: #ffffff;
-            color: #000000;
-            overflow-x: hidden;
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #000;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #E23636;
-        }
-
-        /* Scroll Animation Classes */
-        .reveal {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s ease-out;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Specific typographic tweaks based on the video */
-        .outline-text {
-            color: transparent;
-            -webkit-text-stroke: 2px black;
-        }
-
-        /* Subtle grid background pattern for that comic feel */
-        .bg-comic-grid {
-            background-image: radial-gradient(#d1d1d1 1px, transparent 1px);
-            background-size: 20px 20px;
-        }
-        
-        .skew-box {
-            transform: skew(-5deg);
-        }
-        .unskew-content {
-            transform: skew(5deg);
-        }
-    </style>
-</head>
-<body class="font-inter antialiased bg-comic-grid">
-
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-sm border-b-4 border-black py-4 px-6 md:px-12 flex justify-between items-center transition-all duration-300">
-        <a href="#" class="font-anton text-3xl tracking-wider hover:text-spider-red transition-colors">TUSHAR.CODES</a>
-        <div class="hidden md:flex gap-8 font-bold uppercase text-sm">
-            <a href="#work" class="hover:text-spider-red transition-colors">Work</a>
-            <a href="#about" class="hover:text-spider-blue transition-colors">About</a>
-            <a href="#experience" class="hover:text-spider-red transition-colors">Experience</a>
-            <a href="#contact" class="bg-black text-white px-4 py-2 hover:bg-spider-red transition-colors transform hover:-translate-y-1">Let's Talk</a>
-        </div>
-        <!-- Mobile Menu Button -->
-        <button class="md:hidden text-2xl">
-            <i class="fas fa-bars"></i>
-        </button>
-    </nav>
-
-    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-        <div class="container mx-auto px-4 relative flex flex-col items-center">
-            
-            <!-- Background Graphic Elements -->
-            <div class="absolute top-10 left-10 text-sm font-bold uppercase tracking-widest text-gray-400 -rotate-90 origin-left">
-                Video Editing <span class="text-spider-red">•</span> Graphic Design
-            </div>
-
-            <!-- Massive Header -->
-            <div class="relative z-10 text-center w-full max-w-[1400px] mx-auto reveal active">
-                <h1 class="font-anton text-[18vw] md:text-[15vw] leading-[0.8] tracking-tighter text-black mix-blend-multiply">
-                    PORTFOLIO
-                </h1>
-            </div>
-
-            <!-- Foreground Interaction Area (Where the character goes) -->
-            <!-- NOTE: Replace the src with your transparent Spiderman/Character image -->
-            <div class="absolute inset-0 z-20 pointer-events-none flex items-center justify-center mt-32 md:mt-20">
-                <div class="relative w-full max-w-4xl h-[60vh]">
-                    <!-- This div acts as a placeholder for the swinging/crouching character in the video -->
-                    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-64 md:w-96 h-64 md:h-96 bg-gray-300/50 rounded-full blur-3xl mix-blend-multiply"></div>
-                    <img src="https://placehold.co/600x800/transparent/000000?text=Your+Character+Here\n(Transparent+PNG)" 
-                         alt="Main Character Illustration" 
-                         class="absolute bottom-0 left-1/2 -translate-x-1/2 h-full object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-                    
-                    <!-- Decorative floating elements based on video -->
-                    <div class="absolute top-1/4 left-10 bg-black text-white font-anton px-4 py-2 rotate-[-10deg] shadow-[4px_4px_0_#E23636]">
-                        AI CONTENT
-                    </div>
-                    <div class="absolute bottom-1/4 right-10 bg-white text-black border-4 border-black font-anton px-4 py-2 rotate-[5deg] shadow-[4px_4px_0_#0033CC]">
-                        DESIGN
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Bottom Banner Marquee -->
-        <div class="absolute bottom-0 w-full bg-black text-white py-3 overflow-hidden border-t-4 border-spider-red z-30">
-            <div class="whitespace-nowrap flex animate-[marquee_20s_linear_infinite] font-bold text-lg uppercase tracking-wider">
-                <span class="mx-4">Visual Storyteller</span> • <span class="mx-4">Graphic Designer</span> • <span class="mx-4">Motion Graphics</span> • <span class="mx-4">Video Editor</span> • 
-                <span class="mx-4">Visual Storyteller</span> • <span class="mx-4">Graphic Designer</span> • <span class="mx-4">Motion Graphics</span> • <span class="mx-4">Video Editor</span> •
-                <span class="mx-4">Visual Storyteller</span> • <span class="mx-4">Graphic Designer</span> • <span class="mx-4">Motion Graphics</span> • <span class="mx-4">Video Editor</span> •
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="py-24 bg-white border-b-4 border-black relative z-20">
-        <div class="container mx-auto px-6 md:px-12 max-w-6xl">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center reveal">
-                
-                <!-- Text Content -->
-                <div class="md:col-span-7 space-y-6">
-                    <p class="font-anton text-spider-red text-2xl">Hi, I'm</p>
-                    <h2 class="font-anton text-6xl md:text-8xl leading-none uppercase">Tushar<br>Codes</h2>
-                    <p class="text-xl font-bold bg-black text-white inline-block px-3 py-1 skew-box">
-                        <span class="block unskew-content">Graphic Designer / Video Editor / Developer</span>
-                    </p>
-                    
-                    <p class="text-lg text-gray-700 leading-relaxed max-w-2xl mt-6">
-                        I believe that every creative piece has a purpose, and every design tells a story. Whether it's a static post or a moving frame, I aim to build visuals that are not just eye-catching, but emotionally engaging. My work isn't just about aesthetics; every piece carries a thought, a message, and a visual rhythm.
-                    </p>
-                    
-                    <!-- Software Icons mimicking the video -->
-                    <div class="flex gap-4 pt-6">
-                        <div class="w-12 h-12 bg-[#00005b] text-[#31a8ff] flex items-center justify-center font-bold text-xl border-2 border-black rounded-lg shadow-[2px_2px_0_#000]">Pr</div>
-                        <div class="w-12 h-12 bg-[#00005b] text-[#d998ff] flex items-center justify-center font-bold text-xl border-2 border-black rounded-lg shadow-[2px_2px_0_#000]">Ae</div>
-                        <div class="w-12 h-12 bg-[#001e36] text-[#31a8ff] flex items-center justify-center font-bold text-xl border-2 border-black rounded-lg shadow-[2px_2px_0_#000]">Ps</div>
-                        <div class="w-12 h-12 bg-[#330000] text-[#ff9a00] flex items-center justify-center font-bold text-xl border-2 border-black rounded-lg shadow-[2px_2px_0_#000]">Ai</div>
-                    </div>
-                </div>
-
-                <!-- Profile Image Area -->
-                <div class="md:col-span-5 relative flex justify-center">
-                    <!-- Background blobs for comic effect -->
-                    <div class="absolute inset-0 bg-spider-blue/10 rounded-full blur-3xl transform -translate-y-10"></div>
-                    <!-- NOTE: Replace with your illustrated portrait -->
-                    <img src="https://placehold.co/500x600/f5f5f5/000000?text=Your+Illustration+Here" 
-                         alt="Tushar Portrait" 
-                         class="relative z-10 w-full max-w-[400px] border-4 border-black bg-white shadow-[8px_8px_0_#E23636] object-cover">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="py-24 bg-off-white border-b-4 border-black relative z-20">
-        <div class="container mx-auto px-6 md:px-12 max-w-6xl">
-            <h2 class="font-anton text-5xl md:text-7xl mb-12 uppercase flex items-center gap-4 reveal">
-                <span class="text-spider-red">•</span> My Experience
-            </h2>
-            
-            <div class="space-y-8 reveal delay-100">
-                <p class="text-lg text-gray-700 max-w-3xl mb-8 border-l-4 border-black pl-4">
-                    Creating engaging visuals, promotional videos, and social media content for brands, businesses, educational institutions, and digital marketing campaigns.
-                </p>
-
-                <!-- Experience Items -->
-                <div class="group relative bg-white border-4 border-black p-6 md:p-8 hover:shadow-[8px_8px_0_#0033CC] transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="flex flex-col md:flex-row justify-between md:items-center gap-4">
-                        <div>
-                            <h3 class="font-bold text-2xl uppercase">Freelance Graphic Designer & Video Editor</h3>
-                            <p class="text-gray-600 mt-2">Working with international clients across various niches.</p>
-                        </div>
-                        <div class="font-anton text-2xl text-spider-red">2021 - 2024</div>
-                    </div>
-                </div>
-
-                <div class="group relative bg-white border-4 border-black p-6 md:p-8 hover:shadow-[8px_8px_0_#E23636] transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="flex flex-col md:flex-row justify-between md:items-center gap-4">
-                        <div>
-                            <h3 class="font-bold text-2xl uppercase">Graphic Designer, Video Editor & AI Content Creation</h3>
-                            <p class="text-gray-600 mt-2">TheTusharCodes Agency</p>
-                        </div>
-                        <div class="font-anton text-2xl text-spider-red">Oct 2024 - Present</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="work" class="py-24 bg-white border-b-4 border-black relative z-20">
-        <div class="container mx-auto px-6 md:px-12 max-w-[1400px]">
-            
-            <div class="text-center mb-16 reveal">
-                <h2 class="font-anton text-6xl md:text-8xl uppercase tracking-tight">MY WORK</h2>
-                <p class="font-bold tracking-[0.2em] text-gray-500 mt-2">SELECTED VISUAL WORKS</p>
-            </div>
-
-            <!-- Categories -->
-            <div class="flex flex-wrap justify-center gap-4 md:gap-8 mb-12 font-anton text-2xl md:text-3xl reveal delay-100">
-                <button class="hover:text-spider-red transition-colors border-b-4 border-transparent hover:border-spider-red pb-1">VIDEO EDITING</button>
-                <span class="text-gray-300">•</span>
-                <button class="hover:text-spider-blue transition-colors border-b-4 border-transparent hover:border-spider-blue pb-1">MOTION DESIGN</button>
-                <span class="text-gray-300">•</span>
-                <button class="text-black border-b-4 border-black pb-1">GRAPHIC DESIGNING</button>
-            </div>
-
-            <!-- Work Grid (Mimicking the video layout) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 reveal delay-200">
-                <!-- Video Item 1 -->
-                <div class="group relative aspect-video bg-gray-100 border-4 border-black overflow-hidden cursor-pointer">
-                    <img src="https://placehold.co/800x450/1a1a1a/ffffff?text=Video+Edit+1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-spider-red/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -247,11 +6,12 @@
     <title>thetusharcodes - Tushar Singh | Developer Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <meta name="google-site-verification" content="NkCQUTFp6lsY4SvPQmtzGKeXAdXLdBnxVxgaOO0PKAI"/>
+    <meta name="google-site-verification" content="NkCQUTFp6lsY4SvPQmtzGKeXAdXLdBnxVxgaOO0PKAI" />
 </head>
 <body>
     <div id="particles-js"></div>
     
+
 
     <nav data-aos="fade-down" data-aos-duration="1000">
         <h1 class="logo">thetusharcodes</h1>
@@ -305,7 +65,7 @@
         <h2 data-aos="flip-up">Let's <span>Connect</span></h2>
         <p data-aos="fade-up" data-aos-delay="100">Ready to build something awesome together?</p>
         <br>
-        <a href="anubhavsingh43577@.com" class="btn" data-aos="zoom-in" data-aos-delay="200">Email Me</a>
+        <a href="anubhavsingh43577@gmail.com" class="btn" data-aos="zoom-in" data-aos-delay="200">Email Me</a>
         <div class="social-links" data-aos="fade-up" data-aos-delay="300">
             <a href="https://github.com/thetusharcodes" target="_blank">GitHub (@thetusharcodes)</a>
         </div>
@@ -318,4 +78,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-  
